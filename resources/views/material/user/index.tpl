@@ -257,22 +257,22 @@ table tr td:first-child {
                                 <div class="cardbtn-edit">
                                     <div class="card-heading"><i class="icon icon-md">phonelink</i> 快速使用</div>
                                 </div>
-								<nav class="tab-nav margin-top-no">
-									<ul class="nav nav-list">
-										<li class="active">
-											<a class="" data-toggle="tab" href="#sub_center"><i class="icon icon-lg">info_outline</i>&nbsp;订阅中心</a>
-										</li>
-										<li>
-											<a class="" data-toggle="tab" href="#info_center"><i class="icon icon-lg">flight_takeoff</i>&nbsp;连接信息</a>
-										</li>
-									</ul>
-								</nav>
-								<div class="card-inner">
-									<div class="tab-content">
-										<div class="tab-pane fade" id="info_center">
-											<p>您的链接信息：</p>
-											{if URL::SSRCanConnect($user)}
-												{$user = URL::getSSRConnectInfo($pre_user)}
+                                <nav class="tab-nav margin-top-no">
+                                    <ul class="nav nav-list">
+                                        <li class="active">
+                                            <a class="" data-toggle="tab" href="#sub_center"><i class="icon icon-lg">info_outline</i>&nbsp;订阅中心</a>
+                                        </li>
+                                        <li>
+                                            <a class="" data-toggle="tab" href="#info_center"><i class="icon icon-lg">flight_takeoff</i>&nbsp;连接信息</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <div class="card-inner">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade" id="info_center">
+                                            <p>您的链接信息：</p>
+                                            {if URL::SSRCanConnect($user)}
+                                                {$user = URL::getSSRConnectInfo($pre_user)}
                                                 <table class="table">
                                                     <tbody>
                                                         <tr>
@@ -301,10 +301,10 @@ table tr td:first-child {
                                                         </tr>
                                                     </tbody>
                                                 </table>
-												<hr/>
-												<p>您好，您目前的 加密方式，混淆或协议 适用于 SSR 客户端，请您选用支持 SSR 的客户端来连接，或者到 <a href="/user/edit">资料编辑</a> 页面修改后再来查看此处。</p>
+                                                <hr/>
+                                                <p>您好，您目前的 加密方式，混淆或协议 适用于 SSR 客户端，请您选用支持 SSR 的客户端来连接，或者到 <a href="/user/edit">资料编辑</a> 页面修改后再来查看此处。</p>
                                                 <p>同时, ShadowsocksR 单端口多用户的连接不受您设置的影响，您可以在此使用相应的客户端进行连接</p>
-											{elseif URL::SSCanConnect($user)}
+                                            {elseif URL::SSCanConnect($user)}
                                                 {$user = URL::getSSConnectInfo($pre_user)}
                                                 <table class="table">
                                                     <tbody>
@@ -330,61 +330,61 @@ table tr td:first-child {
                                                         </tr>
                                                     </tbody>
                                                 </table>
-												<hr/>
+                                                <hr/>
                                                 <p>您好，您目前的 加密方式，混淆或协议 适用于 SS 客户端，请您选用支持 SS 协议的客户端来连接，或者到 <a href="/user/edit">资料编辑</a> 页面修改后再来查看此处。</p>
                                                 <p>同时, Shadowsocks 单端口多用户的连接不受您设置的影响，您可以在此使用相应的客户端进行连接</p>
                                             {else}
                                                 <p>您的账户连接信息存在异常，请联系管理员</p>
-											{/if}
-										</div>
-										<div class="tab-pane fade active in" id="sub_center">
-											<nav class="tab-nav margin-top-no">
-												<ul class="nav nav-list">
-													<li class="active">
-														<a class="" data-toggle="tab" href="#sub_center_general"><i class="icon icon-lg">star</i>&nbsp;General</a>
-													</li>
-													<li>
-														<a class="" data-toggle="tab" href="#sub_center_windows"><i class="icon icon-lg">desktop_windows</i>&nbsp;Windows</a>
-													</li>
-													<li>
-														<a class="" data-toggle="tab" href="#sub_center_mac"><i class="icon icon-lg">laptop_mac</i>&nbsp;macOS</a>
-													</li>
-													<li>
-														<a class="" data-toggle="tab" href="#sub_center_ios"><i class="icon icon-lg">phone_iphone</i>&nbsp;iOS</a>
-													</li>
-													<li>
-														<a class="" data-toggle="tab" href="#sub_center_android"><i class="icon icon-lg">android</i>&nbsp;Android</a>
-													</li>
-													<li>
-														<a class="" data-toggle="tab" href="#sub_center_linux"><i class="icon icon-lg">devices_other</i>&nbsp;Linux</a>
-													</li>
-													<li>
-														<a class="" data-toggle="tab" href="#sub_center_router"><i class="icon icon-lg">router</i>&nbsp;Router</a>
-													</li>
-												</ul>
-											</nav>
+                                            {/if}
+                                        </div>
+                                        <div class="tab-pane fade active in" id="sub_center">
+                                            <nav class="tab-nav margin-top-no">
+                                                <ul class="nav nav-list">
+                                                    <li class="active">
+                                                        <a class="" data-toggle="tab" href="#sub_center_general"><i class="icon icon-lg">star</i>&nbsp;General</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="" data-toggle="tab" href="#sub_center_windows"><i class="icon icon-lg">desktop_windows</i>&nbsp;Windows</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="" data-toggle="tab" href="#sub_center_mac"><i class="icon icon-lg">laptop_mac</i>&nbsp;macOS</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="" data-toggle="tab" href="#sub_center_ios"><i class="icon icon-lg">phone_iphone</i>&nbsp;iOS</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="" data-toggle="tab" href="#sub_center_android"><i class="icon icon-lg">android</i>&nbsp;Android</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="" data-toggle="tab" href="#sub_center_linux"><i class="icon icon-lg">devices_other</i>&nbsp;Linux</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="" data-toggle="tab" href="#sub_center_router"><i class="icon icon-lg">router</i>&nbsp;Router</a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
                                             {function name=printClient items=null}
                                                 {foreach $items as $item}
                                                     <hr/>
-												    <p><span class="icon icon-lg text-white">filter_9_plus</span> {$item['name']} - [ {$item['support']} ]：</p>
-													<p>
+                                                    <p><span class="icon icon-lg text-white">filter_9_plus</span> {$item['name']} - [ {$item['support']} ]：</p>
+                                                    <p>
                                                         应用下载：
                                                         {foreach $item['download_urls'] as $download_url}
                                                         {if !$download_url@first}.{/if}
                                                         <a class="btn-dl" href="{$download_url['url']}"><i class="material-icons icon-sm">cloud_download</i> {$download_url['name']}</a>
                                                         {/foreach}
                                                     </p>
-													<p>
+                                                    <p>
                                                         使用教程：
                                                         <a class="btn-dl" href="{if $config['use_this_doc'] === false}/user/tutorial{else}{$item['tutorial_url']}{/if}"><i class="material-icons icon-sm">turned_in_not</i> 点击查看</a>
                                                     </p>
                                                     {if isset($item['description'])}
-													<p>
+                                                    <p>
                                                         相关说明：
                                                         {$item['description']}
                                                     </p>
                                                     {/if}
-													<p>
+                                                    <p>
                                                         使用方式：
                                                     {foreach $item['subscribe_urls'] as $subscribe_url}
                                                         {if !$subscribe_url@first}.{/if}
@@ -398,8 +398,25 @@ table tr td:first-child {
                                                     </p>
                                                 {/foreach}
                                             {/function}
-											<div class="tab-pane fade active in" id="sub_center_general">
-												<p>此处为通用订阅，适用于多种应用的订阅，如您使用的客户端不在各平台列举的名单中则在此使用订阅服务.</p>
+                                            <div class="tab-pane fade active in" id="sub_center_general">
+                                                <p>此处为通用订阅，适用于多种应用的订阅，如您使用的客户端不在各平台列举的名单中则在此使用订阅服务.</p>
+                                                <hr/>
+                                                <p><span class="icon icon-lg text-white">filter_1</span> [ SS ]：
+                                                    <a id="general_ss" class="copy-config btn-dl" onclick=Copyconfig("/user/getUserAllURL?type=ss","#general_ss","")><i class="material-icons icon-sm">send</i> 拷贝全部节点 URL</a>
+                                                </p>
+                                                <hr/>
+                                                <p><span class="icon icon-lg text-white">filter_2</span> [ SSR ]：
+                                                    <a class="copy-text btn-dl" data-clipboard-text="{$subInfo['ssr']}"><i class="material-icons icon-sm">send</i> 拷贝订阅链接</a>.<a id="general_ssr" class="copy-config btn-dl" onclick=Copyconfig("/user/getUserAllURL?type=ssr","#general_ssr","")><i class="material-icons icon-sm">send</i> 拷贝全部节点 URL</a>
+                                                </p>
+                                                <hr/>
+                                                <p>如您使用 V2Ray/Trojan 订阅，请确认您的服务内包含该类协议的节点，若您所使用的客户端不在我们的支持内，那么请您考虑更换客户端或与我们的客服联系.</p>
+                                                <p><span class="icon icon-lg text-white">filter_3</span> [ V2RayN ]：
+                                                    <a class="copy-text btn-dl" data-clipboard-text="{$subInfo['v2ray']}"><i class="material-icons icon-sm">send</i> 拷贝订阅链接</a>.<a id="general_v2ray" class="copy-config btn-dl" onclick=Copyconfig("/user/getUserAllURL?type=v2ray","#general_v2ray","")><i class="material-icons icon-sm">send</i> 拷贝全部节点 URL</a>
+                                                </p>
+                                                <hr/>
+                                                <p><span class="icon icon-lg text-white">filter_4</span> [ Trojan ]：
+                                                    <a class="copy-text btn-dl" data-clipboard-text="{$subInfo['trojan']}"><i class="material-icons icon-sm">send</i> 拷贝订阅链接</a>
+                                                </p>
                                                 <hr/>
 												<p>如您使用 V2Ray/Trojan 订阅，请确认您的服务内包含该类协议的节点，若您所使用的客户端不在我们的支持内，那么请您考虑更换客户端或与我们的客服联系.</p>
 												<p><span class="icon icon-lg text-white">filter_1</span> [ V2RayN ]：
@@ -420,7 +437,7 @@ table tr td:first-child {
                                                         使用教程：
                                                         <a class="btn-dl" href="{if $config['use_this_doc'] === false}/user/tutorial{else}/doc/#/Windows/V2RayN{/if}"><i class="material-icons icon-sm">turned_in_not</i> 点击查看</a>
                                                     </p>
-													<p>
+                                                    <p>
                                                         使用方式：
                                                         <a class="copy-text btn-dl" data-clipboard-text="{$subInfo['v2ray']}"><i class="material-icons icon-sm">send</i> 拷贝订阅链接</a>
                                                         .
@@ -442,7 +459,7 @@ table tr td:first-child {
                                                         使用教程：
                                                         <a class="btn-dl" href="{if $config['use_this_doc'] === false}/user/tutorial{else}/doc/#/macOS/V2RayU{/if}"><i class="material-icons icon-sm">turned_in_not</i> 点击查看</a>
                                                     </p>
-													<p>
+                                                    <p>
                                                         使用方式：
                                                         <a class="copy-text btn-dl" data-clipboard-text="{$subInfo['v2ray']}"><i class="material-icons icon-sm">send</i> 拷贝订阅链接</a>
                                                     </p>
@@ -451,20 +468,20 @@ table tr td:first-child {
                                                     {printClient items=$config['userCenterClient']['macOS']}
                                                 {/if}
                                             {/if}
-											</div>
-											<div class="tab-pane fade" id="sub_center_ios">
-											{if $display_ios_class>=0}
-												{if $user->class>=$display_ios_class && $user->get_top_up()>=$display_ios_topup}
-												<div><span class="icon icon-lg text-white">account_box</span> 本站iOS账户：</div>
-												<div class="float-clear">
-													<input type="text" class="input form-control form-control-monospace cust-link col-xx-12 col-sm-8 col-lg-7" name="input1" readonly value="{$ios_account}" readonly="true">
-													<button class="copy-text btn btn-subscription col-xx-12 col-sm-3 col-lg-2" type="button" data-clipboard-text="{$ios_account}">点击复制</button>
+                                            </div>
+                                            <div class="tab-pane fade" id="sub_center_ios">
+                                            {if $display_ios_class>=0}
+                                                {if $user->class>=$display_ios_class && $user->get_top_up()>=$display_ios_topup}
+                                                <div><span class="icon icon-lg text-white">account_box</span> 本站iOS账户：</div>
+                                                <div class="float-clear">
+                                                    <input type="text" class="input form-control form-control-monospace cust-link col-xx-12 col-sm-8 col-lg-7" name="input1" readonly value="{$ios_account}" readonly="true">
+                                                    <button class="copy-text btn btn-subscription col-xx-12 col-sm-3 col-lg-2" type="button" data-clipboard-text="{$ios_account}">点击复制</button>
                                                     <br>
-												</div>
-												<div><span class="icon icon-lg text-white">lock</span> 本站iOS密码：</div>
-												<div class="float-clear">
-													<input type="text" class="input form-control form-control-monospace cust-link col-xx-12 col-sm-8 col-lg-7" name="input1" readonly value="{$ios_password}" readonly="true">
-													<button class="copy-text btn btn-subscription col-xx-12 col-sm-3 col-lg-2" type="button" data-clipboard-text="{$ios_password}">点击复制</button>
+                                                </div>
+                                                <div><span class="icon icon-lg text-white">lock</span> 本站iOS密码：</div>
+                                                <div class="float-clear">
+                                                    <input type="text" class="input form-control form-control-monospace cust-link col-xx-12 col-sm-8 col-lg-7" name="input1" readonly value="{$ios_password}" readonly="true">
+                                                    <button class="copy-text btn btn-subscription col-xx-12 col-sm-3 col-lg-2" type="button" data-clipboard-text="{$ios_password}">点击复制</button>
                                                     <br>
 												</div>
 												<p><span class="icon icon-lg text-white">error</span><strong>禁止将账户分享给他人！</strong></p>
@@ -481,7 +498,7 @@ table tr td:first-child {
                                                         使用教程：
                                                         <a class="btn-dl" href="{if $config['use_this_doc'] === false}/user/tutorial{else}/doc/#/iOS/Shadowrocket{/if}"><i class="material-icons icon-sm">turned_in_not</i> 点击查看</a>
                                                     </p>
-													<p>
+                                                    <p>
                                                         使用方式：
                                                         <a class="copy-text btn-dl" data-clipboard-text="{$subInfo['ss']}"><i class="material-icons icon-sm">send</i> 拷贝 SS 订阅链接</a>
                                                         .
@@ -511,7 +528,7 @@ table tr td:first-child {
                                                         使用教程：
                                                         <a class="btn-dl" href="{if $config['use_this_doc'] === false}/user/tutorial{else}/doc/#/Android/V2RayNG{/if}"><i class="material-icons icon-sm">turned_in_not</i> 点击查看</a>
                                                     </p>
-													<p>
+                                                    <p>
                                                         使用方式：
                                                         <a class="copy-text btn-dl" data-clipboard-text="{$subInfo['v2ray']}"><i class="material-icons icon-sm">send</i> 拷贝订阅链接</a>
                                                     </p>
@@ -528,10 +545,10 @@ table tr td:first-child {
                                                     {printClient items=$config['userCenterClient']['Linux']}
                                                 {/if}
                                             {/if}
-											</div>
-											<div class="tab-pane fade" id="sub_center_router">
-												<p><span class="icon icon-lg text-white">filter_1</span> Koolshare 固件路由器/软路由：</p>
-													<p>
+                                            </div>
+                                            <div class="tab-pane fade" id="sub_center_router">
+                                                <p><span class="icon icon-lg text-white">filter_1</span> Koolshare 固件路由器/软路由：</p>
+                                                    <p>
                                                         应用下载：
                                                         <a class="btn-dl" href="https://github.com/hq450/fancyss_history_package"><i class="material-icons icon-sm">cloud_download</i> FancySS 下载页面</a>
                                                         .
@@ -541,7 +558,7 @@ table tr td:first-child {
                                                         使用教程：
                                                         <a class="btn-dl" href="{if $config['use_this_doc'] === false}/user/tutorial{else}/doc/#/Router/Koolshare{/if}"><i class="material-icons icon-sm">turned_in_not</i> 点击查看</a>
                                                     </p>
-													<p>
+                                                    <p>
                                                         使用方式：
                                                         <a class="copy-text btn-dl" data-clipboard-text="{$subInfo['ssr']}"><i class="material-icons icon-sm">send</i> 拷贝 SSR 订阅链接</a>
                                                         .
@@ -552,10 +569,10 @@ table tr td:first-child {
                                                     {printClient items=$config['userCenterClient']['Router']}
                                                 {/if}
                                             {/if}
-											</div>
-										</div>
-									</div>
-								</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -584,8 +601,8 @@ table tr td:first-child {
         $$.getElementById('msg').innerHTML = '已复制，请您继续接下来的操作';
     });
     function AddSub(url,jumpurl="") {
-	    let tmp = window.btoa(url);
-	    window.location.href = jumpurl + tmp;
+        let tmp = window.btoa(url);
+        window.location.href = jumpurl + tmp;
     }
     function Copyconfig(url,id,jumpurl="") {
         $.ajax({
@@ -597,7 +614,7 @@ table tr td:first-child {
                     $("#result").modal();
                     $("#msg").html("获取成功");
                     $(id).data('data', res);
-		    		console.log(res);
+                    console.log(res);
                 } else {
                     $("#result").modal();
                    $("#msg").html("获取失败，请稍后再试");
@@ -610,24 +627,24 @@ table tr td:first-child {
             }
         });
         clipboard.on('success', function(e) {
-				    $("#result").modal();
-				    if (jumpurl != "") {
-					    $("#msg").html("复制成功，即将跳转到 APP");
-					    window.setTimeout(function () {
-						    window.location.href = jumpurl;
-					    }, 1000);
+                    $("#result").modal();
+                    if (jumpurl != "") {
+                        $("#msg").html("复制成功，即将跳转到 APP");
+                        window.setTimeout(function () {
+                            window.location.href = jumpurl;
+                        }, 1000);
 
-				    } else {
-					    $("#msg").html("复制成功");
-				    }
-			    }
+                    } else {
+                        $("#msg").html("复制成功");
+                    }
+                }
         );
         clipboard.on("error",function(e){
-		    console.error('Action:', e.action);
-		    console.error('Trigger:', e.trigger);
-		    console.error('Text:', e.text);
-			}
-	    );
+            console.error('Action:', e.action);
+            console.error('Trigger:', e.trigger);
+            console.error('Text:', e.text);
+            }
+        );
     }
     {if $user->transfer_enable-($user->u+$user->d) == 0}
     window.onload = function () {
