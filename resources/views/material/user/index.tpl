@@ -16,6 +16,7 @@ table tr td:first-child {
     <div class="content-header ui-content-header">
         <div class="container">
             <h1 class="content-heading">用户中心</h1>
+            <h3 class="content-heading">请务必向下滑动查看公告</h3>
         </div>
     </div>
     <div class="container">
