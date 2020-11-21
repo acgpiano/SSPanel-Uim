@@ -150,7 +150,7 @@ class Node extends Model
 
     public function isNodeTrafficOut()
     {
-        $node_bandwidth = $this->attributes['node_bandwidth'] * $this->traffic_rate;
+        $node_bandwidth = $this->attributes['node_bandwidth'];
         $node_bandwidth_limit = $this->attributes['node_bandwidth_limit'];
 
         return !($node_bandwidth_limit == 0 || $node_bandwidth < $node_bandwidth_limit);

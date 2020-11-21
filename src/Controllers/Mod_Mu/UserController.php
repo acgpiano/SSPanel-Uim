@@ -181,7 +181,7 @@ class UserController extends BaseController
             }
         }
 
-        $node->node_bandwidth += $this_time_total_bandwidth;
+        $node->node_bandwidth += $this_time_total_bandwidth * $node->traffic_rate;
         $node->save();
 
         $online_log = new NodeOnlineLog();
