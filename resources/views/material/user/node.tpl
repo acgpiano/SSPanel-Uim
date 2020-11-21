@@ -142,7 +142,7 @@
                                         <!-- 节点流量倍率 -->
                                         <div class="nodecheck node-flex">
                                             <i class="material-icons node-icon">network_check</i>
-                                            <span>x{$node['traffic_rate']}</span>
+                                            <span>x{if $node['traffic_rate'] == 2}1{else}{$node['traffic_rate']}{/if}</span>
                                         </div>
                                         <!-- 节点速率 -->
                                         <div class="nodeband node-flex">
