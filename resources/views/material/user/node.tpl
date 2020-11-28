@@ -272,7 +272,7 @@
                                                         {/if}
                                                         | <span class="node-icon">
                                                             <i class="icon icon-lg">network_check</i></span>
-                                                        <span class="node-tr">{$node['traffic_rate']} 倍率</span>
+                                                        <span class="node-tr">{if $node['traffic_rate'] == 2}1{else}{$node['traffic_rate']}{/if} 倍率</span>
                                                         | <span class="node-icon"><i class="icon icon-lg">notifications_none</i></span>
                                                         <span class="node-status">{$node['status']}</span>
                                                     </div>
