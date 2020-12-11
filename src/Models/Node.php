@@ -220,7 +220,7 @@ class Node extends Model
      * @param int  $is_ss
      * @param bool $emoji
      */
-    public function getItem(User $user, int $mu_port = 0, int $relay_rule_id = 0, int $is_ss = 0, bool $emoji = false):? array
+    public function getItem(User $user, int $mu_port = 0, int $relay_rule_id = 0, int $is_ss = 0, bool $emoji = false): ?array
     {
         $relay_rule = Relay::where('id', $relay_rule_id)
             ->where(
