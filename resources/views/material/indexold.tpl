@@ -29,9 +29,6 @@
 <div id="wrapper">
     <!--首页开始-->
     <header id="header">
-        <div class="logo">
-            <span class="icon fa-rocket"></span>
-        </div>
         {if $user->isLogin}
             <div class="content">
                 <div class="inner">
@@ -57,7 +54,6 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#1">简介</a></li>
                     {if $user->is_admin}
                     <li><a href="/admin">管理后台</a></li>
                     {/if}
@@ -90,7 +86,7 @@
         <!--标签1开始-->
         <article id="1">
             <h2 class="major">简介</h2>
-            <p>「ホワイトアルバムの季節」が、また、やってきた。</p>
+            <p>多年老店，无需担心跑路</p>
         </article>
         <!--
         简介修改示例:
