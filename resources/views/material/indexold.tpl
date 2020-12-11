@@ -74,7 +74,6 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#1">简介</a></li>
                     <li><a href="/auth/login">登录</a></li>
                     <li><a href="/auth/register">注册</a></li>
                 </ul>
