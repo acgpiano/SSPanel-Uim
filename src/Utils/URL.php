@@ -430,15 +430,12 @@ class URL
     {
         $item = Tools::v2Array($node->server);
         $item['v'] = '2';
-        $item['type'] = 'vmess';
         $item['ps'] = ($emoji ? Tools::addEmoji($node->name) : $node->name);
         $item['remark'] = $item['ps'];
         $item['id'] = $user->getUuid();
         $item['class'] = $node->node_class;
         if (!$arrout) {
-            return 'vmess://' . base64_encode(
-                json_encode($item, 320)
-            );
+            return AppURI::getV2RayNURI($item);
         }
         return $item;
     }

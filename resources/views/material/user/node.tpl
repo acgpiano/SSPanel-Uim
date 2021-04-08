@@ -11,7 +11,7 @@
 </script>
 
 {function displayV2rayNode node=null}
-    {$v2server = $node['raw_node']->getV2RayItem($user)}
+    {$v2server = $node['raw_node']->getXrayItem($user)}
     <p>节点地址：<span class="card-tag tag-blue">{$v2server['add']}</span></p>
     <p>节点端口：<span class="card-tag tag-volcano">{$v2server['port']}</span></p>
     <p>AlterId：<span class="card-tag tag-purple">{$v2server['aid']}</span></p>
@@ -26,11 +26,14 @@
         <p>伪装方式：<span class="card-tag tag-green">{$v2server['type']}</span></p>
     {/if}
 
-    {if $v2server['tls'] == 'tls'}
-        <p>TLS：<span class="card-tag tag-green">TLS</span></p>
+    {if isset($v2server['tls']) && $v2server['tls'] != ''}
+        <p>TLS：<span class="card-tag tag-green">{$v2server['tls']}</span></p>
+		    {if $v2server['tls'] == 'xtls' && isset($v2server['flow']) && $v2server['flow'] != ''}
+		    <p>flow：<span class="card-tag tag-green">{$v2server['flow']}</span></p>		        
+		    {/if}
     {/if}
 
-    <p>V2RayN 链接：
+    <p>{$v2server['type']} 链接：
         <a class="copy-text" data-clipboard-text="{URL::getV2Url($user, $node['raw_node'])}">点击复制</a>
     </p>
 {/function}

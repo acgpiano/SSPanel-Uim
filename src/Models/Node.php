@@ -300,6 +300,24 @@ class Node extends Model
     }
 
     /**
+     * 获取 V2Ray 节点
+     *
+     * @param User $user
+     * @param int  $mu_port
+     * @param int  $relay_rule_id
+     * @param int  $is_ss
+     * @param bool $emoji
+     */
+    public function getXrayItem(User $user, int $mu_port = 0, int $relay_rule_id = 0, int $is_ss = 0, bool $emoji = false): array
+    {
+        $item           = Tools::v2Array($this->server);
+        $item['remark'] = ($emoji ? Tools::addEmoji($this->name) : $this->name);
+        $item['id']     = $user->getUuid();
+        $item['class']  = $this->node_class;
+        return $item;
+    }
+
+    /**
      * 获取 V2RayPlugin | obfs 节点
      *
      * @param User $user 用户
