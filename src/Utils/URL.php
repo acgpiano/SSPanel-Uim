@@ -269,8 +269,8 @@ class URL
             // 其他类型单端口节点
             if (in_array($node->sort, [11, 12, 13, 14])) {
                 $node_class = [
-                    11 => 'getV2RayItem',           // V2Ray
-                    12 => 'getV2RayItem',           // V2Ray
+                    11 => 'getXrayItem',           // V2Ray
+                    12 => 'getXrayItem',           // V2Ray
                     13 => 'getV2RayPluginItem',     // Rico SS (V2RayPlugin && obfs)
                     14 => 'getTrojanItem',          // Trojan
                 ];
@@ -365,6 +365,8 @@ class URL
         $items = URL::getNew_AllItems($user, $Rule);
         foreach ($items as $item) {
             if ($item['type'] == 'vmess') {
+                $out = LinkController::getListItem($item, 'v2rayn');
+            } elseif ($item['type'] == 'vless'){
                 $out = LinkController::getListItem($item, 'v2rayn');
             } else {
                 $out = LinkController::getListItem($item, $Rule['type']);
